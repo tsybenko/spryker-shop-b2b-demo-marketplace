@@ -1,0 +1,44 @@
+{
+	"name": "Spryker B2B Marketplace - Code Review",
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+	
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "18"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"TheNouillet.symfony-vscode",
+				"ms-vscode.vscode-typescript-next",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"Angular.ng-template",
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml",
+				"mechatroner.rainbow-csv",
+				"EditorConfig.EditorConfig"
+			],
+			"settings": {
+				"php.suggest.basic": false,
+				"php.validate.enable": true,
+				"intelephense.files.maxSize": 1000000,
+				"typescript.preferences.includePackageJsonAutoImports": "on",
+				"files.associations": {
+					"*.twig": "html",
+					"*.yml": "yaml",
+					"*.neon": "yaml"
+				}
+			}
+		}
+	},
+
+	"remoteUser": "vscode",
+	
+	"mounts": [
+		"source=spryker-composer-cache,target=/home/vscode/.composer/cache,type=volume"
+	]
+}
